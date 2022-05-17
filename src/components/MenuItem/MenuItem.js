@@ -4,7 +4,7 @@ import './MenuItem.css'
 export default function MenuItem({ title }) {
   return (
     <div className='menuItem'>
-      <h4>{title}</h4>
+      <h4><span>{title}</span></h4>
     </div>
   )
 }

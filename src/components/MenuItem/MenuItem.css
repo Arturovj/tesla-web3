@@ -1,7 +1,11 @@
 .menuItem {
+    height: fit-content;
     border-bottom: 1px solid #d0d1d2;
     text-align: left;
     cursor: pointer;
+    
+   
+    
   }
   
   .menuItem > h4 {
@@ -12,4 +16,28 @@
     font-size: 15px;
     padding-left: 10px;
     cursor: pointer;
+    color: black;
+    transition: 0.1s;
+  
+  }
+
+  .menuItem > a {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+    color: black;
+    transition: 0.1s;
+  }
+
+
+
+
+  h4:hover span{
+      height: 100%;
+      width: 100%;
+  }
+
+  h4:hover{
+      color: red;
   }

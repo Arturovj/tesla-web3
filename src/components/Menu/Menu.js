@@ -5,19 +5,19 @@ import './Menu.css'
 export default function Menu() {
   return (
     <div className='menu'>
-    <MenuItem title='existing inventory' />
-    <MenuItem title='used inventory' />
-    <MenuItem title='trade-in' />
-    <MenuItem title='cybertruck' />
-    <MenuItem title='roadster' />
-    <MenuItem title='semi' />
-    <MenuItem title='charging' />
-    <MenuItem title='powerwall' />
-    <MenuItem title='commercial solar' />
-    <MenuItem title='test drive' />
-    <MenuItem title='find us' />
-    <MenuItem title='support' />
-    <MenuItem title='united states' />
+    <MenuItem title='Existing inventory' />
+    <MenuItem title='Used inventory' />
+    <MenuItem title='Trade-in' />
+    <MenuItem title='Cybertruck' />
+    <MenuItem title='Roadster' />
+    <MenuItem title='Semi' />
+    <MenuItem title='Charging' />
+    <MenuItem title='Powerwall' />
+    <MenuItem title='Commercial solar' />
+    <MenuItem title='Test drive' />
+    <MenuItem title='Find us' />
+    <MenuItem title='Support' />
+    <MenuItem title='United States' />
   </div>
   )
 }
