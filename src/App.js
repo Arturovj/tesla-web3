@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 import WorldCanvas from "./components/World/WorldCanvas";
 import Menu from "./components/Menu/Menu";
+import Hover from "./components/Hover/Hover";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
       <WorldCanvas></WorldCanvas>
      
+     <Hover></Hover>
     </div>
   );
 }

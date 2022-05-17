@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   position: relative;
 
   canvas {
-    height: 720px;
+    height: 500px;
     width: 500px;
     
   }
