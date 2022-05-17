@@ -18,6 +18,7 @@
     cursor: pointer;
     color: black;
     transition: 0.1s;
+    
   
   }
 
@@ -36,6 +37,7 @@
   h4:hover span{
       height: 100%;
       width: 100%;
+      
   }
 
   h4:hover{

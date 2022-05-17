@@ -2,7 +2,9 @@
     width: 100%;
   }
   .all {
-    width: 900px;
+    
+    width: auto;
+    max-width: 720px;
    margin: 0 auto;
     display: flex;
     perspective: 10px;
@@ -14,6 +16,7 @@
     transform-style: preserve-3d;
   }
   .all:hover {
+    
     perspective: 720px;
     transition: all 1.3s ease-in;
     transform: perspective(10000px) rotateX(0deg);
@@ -32,6 +35,7 @@
   .left, .center, .right, .lefter, .righter {
     width: 200px;
     height: 150px;
+   
     transform-style: preserve-3d;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -64,6 +68,7 @@
     text-shadow: 0 0 5px rgba(217, 217, 217, 0.6)
   }
   .lefter {
+    
     transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
     background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
   }
@@ -84,8 +89,9 @@
     background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
   }
   .explainer {
+    
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: rgb(0, 0, 0);
     transition: all .6s ease;
     width: 100%;

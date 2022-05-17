@@ -29,10 +29,11 @@ export default function WorldCanvas() {
 
 const Wrapper = styled.div`
   position: relative;
+  margin: 0 auto;
 
   canvas {
     height: 500px;
-    width: 500px;
+    width: auto;
     
   }
 `;
