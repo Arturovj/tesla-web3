@@ -8,19 +8,19 @@ import { OrbitControls } from "@react-three/drei";
 
 
 // import World from "../GLTF/World";
-import Quadra from "../GLTF/Quadra";
+import Cyber from "../GLTF/Cyber";
 
 
 export default function WorldCanvas() {
   return (
     <Wrapper className="world">
       <Canvas clasName="canvas">
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
-        <ambientLight intensity={1} />
-        <spotLight intensity={2.5} angle={0.1} penumbra={1} position={[10,15,10]} castShadow></spotLight>
-        <directionalLight position={[-5, 10, 5]} />
+        <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1.5}  />
+        <ambientLight intensity={4} />
+        <spotLight intensity={10} angle={20} penumbra={0.1} position={[10,20,10]} castShadow></spotLight>
+        <directionalLight position={[-1, 5, 1]} />
         <Suspense fallback={null}>
-          <Quadra />
+          <Cyber />
         </Suspense>
         </Canvas>
     </Wrapper>
@@ -33,5 +33,6 @@ const Wrapper = styled.div`
   canvas {
     height: 720px;
     width: 500px;
+    
   }
 `;

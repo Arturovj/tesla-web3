@@ -16,9 +16,10 @@ export default function Model({ ...props }) {
   console.log(materials)
   return (
     <group ref={group} {...props} dispose={null}>
+          
        <mesh position={[-0.1, -1.5, 0.1]} scale={1.2}
        >
-         
+       
          
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.29}>
     
@@ -31,16 +32,20 @@ export default function Model({ ...props }) {
         <group position={[-1.75, -8.09, 1.23]} rotation={[0, 0, -Math.PI]} scale={[0.56, 0.03, 0.24]}>
           <mesh geometry={nodes.Sketchfab_Nummernschild_vorne_0.geometry} material={materials.Material} />
         </group>
+
         <mesh geometry={nodes.Sketchfab_Spoilerstangen_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Heckzeugs_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Karosserie_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Kotfluegel_0.geometry} material={materials.Material} />
-        <mesh geometry={nodes.Sketchfab_Rad_vorne_0.geometry} material={materials.Material} />
+        <mesh geometry={nodes.Sketchfab_Rad_vorne_0.geometry} material={materials.Material} >
+       
+        </mesh>
         <mesh geometry={nodes.Sketchfab_Rad_hinten_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Radlauf_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Spoiler_0.geometry} material={materials.Material} />
         <group position={[1.42, 0, 0]}>
           <mesh geometry={nodes.Sketchfab_Stange_0.geometry} material={materials.Material} />
+          
         </group>
         <mesh geometry={nodes.Sketchfab_Luftfilter_0.geometry} material={materials.Material} />
         <mesh geometry={nodes.Sketchfab_Auspuff_0.geometry} material={materials.Material} />
@@ -57,10 +62,14 @@ export default function Model({ ...props }) {
           <mesh geometry={nodes.Sketchfab_Nummernschild_vorne001_0.geometry} material={materials.Material} />
         </group>
         <group position={[1.78, 8.37, 2.89]} rotation={[-1.15, 0.01, 3.14]} scale={[0.1, 0.15, 0.2]}>
+          
           <mesh geometry={nodes['01_Aufkleber_Quadra_vorne001_0'].geometry} material={materials.Material} />
         </group>
       </group>
+
+  
       </mesh>
+    
     </group>
   )
 }
