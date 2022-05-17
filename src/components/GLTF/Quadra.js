@@ -16,9 +16,13 @@ export default function Model({ ...props }) {
   console.log(materials)
   return (
     <group ref={group} {...props} dispose={null}>
-       <mesh position={[-0.1, -1.5, 0.1]} scale={1.2}>
+       <mesh position={[-0.1, -1.5, 0.1]} scale={1.2}
+       >
+         
+         
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.29}>
-        <mesh geometry={nodes.Boden_0.geometry} material={materials.Boden}  />
+    
+        <mesh geometry={nodes.Boden_0.geometry} material={materials.Boden} ></mesh>
         <mesh geometry={nodes['V-Tech_0'].geometry} material={materials.Material} />
         <group position={[2.05, -7.98, 1.12]} rotation={[Math.PI / 2, 0.12, 0]} scale={[0.1, 0.15, 0.2]}>
           <mesh geometry={nodes['01_Aufkleber_Quadra_vorne_0'].geometry} material={materials.Material} />
