@@ -46,3 +46,14 @@
     font-weight: 500;
     font-size: 15px;
 }
+
+.header__menu > .MuiSvgIcon-root{
+    position:relative;
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+.header__link--hidden{
+    visibility: hidden;
+}
