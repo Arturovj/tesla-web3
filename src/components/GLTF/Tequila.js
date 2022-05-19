@@ -16,7 +16,7 @@ export default function Model({ ...props }) {
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <mesh position={[-0.2, 0.1, -0.2]} scale={0.08}>
+          <mesh position={[-0.2, -1.2, -0.2]} scale={0.11}>
           <group position={[-0.27, 6.16, -4.6]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
             <mesh geometry={nodes.Plane_bottleinside_0.geometry} material={materials['bottle.inside']} />
           </group>

@@ -13,9 +13,9 @@ import Tequila from "../GLTF/Tequila";
 
 export default function TequilaCanvas() {
   return (
-    <Wrapper className="world">
+    <Wrapper className="tequila">
       <Canvas clasName="canvas">
-        <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1.5}  />
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
         <ambientLight intensity={5} />
         <spotLight intensity={10} angle={20} penumbra={0.01} position={[-10,20,-5]} castShadow></spotLight>
         <directionalLight position={[-1, 5, 1]} />
