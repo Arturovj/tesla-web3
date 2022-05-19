@@ -8,8 +8,10 @@ import { Routes, Route } from "react-router-dom";
 
 import Menu from "./components/Menu/Menu";
 
-import Tequila from "./components/Tequila/Tequila";
+
 import Home from "./components/Pages/Home";
+import QuadCanvas from "./components/Quad/Quad";
+import TequilaCanvas from "./components/Tequila/Tequila";
 
 
 function App() {
@@ -23,8 +25,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/cyberquad" element={""}></Route>
-        <Route path="/tequila" element={<Tequila/>}></Route>
+        <Route path="/cyberquad" element={<QuadCanvas/>}></Route>
+        <Route path="/tequila" element={<TequilaCanvas/>}></Route>
         <Route path="/cybertruck" element={""}></Route>
         <Route path="/robot" element={""}></Route>
 
