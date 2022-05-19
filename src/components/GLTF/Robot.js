@@ -14,7 +14,7 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/robot.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh position={[-0.2, -2.3, -0.2]} scale={3.4}>
+      <mesh position={[-0.2, -2.7, -0.2]} scale={3.4}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.85}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <primitive object={nodes._rootJoint} />
