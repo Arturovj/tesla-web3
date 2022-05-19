@@ -14,6 +14,7 @@ import QuadCanvas from "./components/Quad/Quad";
 import TequilaCanvas from "./components/Tequila/Tequila";
 import Cybetruck from "./components/Cybertruck/Cybetruck";
 import RobotCanvas from "./components/Robot/Robot";
+import { FooterContainer } from "./containers/footer";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
 
       </Routes>
 
-     
+      <FooterContainer />
     </div>
   );
 }
