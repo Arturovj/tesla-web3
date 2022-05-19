@@ -35,7 +35,7 @@ function App() {
 
       </Routes>
 
-      <FooterContainer />
+      <FooterContainer style={{ bottom: 0}} />
     </div>
   );
 }
