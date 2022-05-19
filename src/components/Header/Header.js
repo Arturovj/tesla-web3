@@ -16,10 +16,10 @@ export default function Header({ isMenuOpen, setIsMenuOpen}) {
             </Link>
         </div>
         <div className='header__links'>
-            <Link to="/"> Cybertruck </Link>
-            <Link to="/"> CyberQuad </Link>
-            <Link to="/"> Robot </Link>
-            <Link to="/"> Tequila </Link>
+            <Link to="/cybertruck"> Cybertruck </Link>
+            <Link to="/cyberquad"> CyberQuad </Link>
+            <Link to="/robot"> Robot </Link>
+            <Link to="/tequila"> Tequila </Link>
         </div>
         <div className='header__right'>
             <Link to="/" className={isMenuOpen && 'header__link--hidden'}> Shop </Link>

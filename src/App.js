@@ -5,9 +5,11 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 
-import WorldCanvas from "./components/World/WorldCanvas";
+
 import Menu from "./components/Menu/Menu";
-import Hover from "./components/Hover/Hover";
+
+import Tequila from "./components/Tequila/Tequila";
+import Home from "./components/Pages/Home";
 
 
 function App() {
@@ -17,11 +19,18 @@ function App() {
     <div className="App">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {isMenuOpen && <Menu />}
-      <Routes></Routes>
 
-      <WorldCanvas></WorldCanvas>
+
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/cyberquad" element={""}></Route>
+        <Route path="/tequila" element={<Tequila/>}></Route>
+        <Route path="/cybertruck" element={""}></Route>
+        <Route path="/robot" element={""}></Route>
+
+      </Routes>
+
      
-     <Hover></Hover>
     </div>
   );
 }
