@@ -9,10 +9,12 @@ import { OrbitControls } from "@react-three/drei";
 
 // import World from "../GLTF/World";
 import Robot from "../GLTF/Robot";
+import Hover from "../Hover/Hover";
 
 
 export default function RobotCanvas() {
   return (
+      <>
     <Wrapper className="robot">
       <Canvas clasName="canvas">
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
@@ -24,6 +26,8 @@ export default function RobotCanvas() {
         </Suspense>
         </Canvas>
     </Wrapper>
+    <Hover/>
+    </>
   );
 }
 

@@ -9,10 +9,12 @@ import { OrbitControls } from "@react-three/drei";
 
 // import World from "../GLTF/World";
 import Tequila from "../GLTF/Tequila";
+import Hover from "../Hover/Hover";
 
 
 export default function TequilaCanvas() {
   return (
+      <>
     <Wrapper className="tequila">
       <Canvas clasName="canvas">
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
@@ -24,6 +26,9 @@ export default function TequilaCanvas() {
         </Suspense>
         </Canvas>
     </Wrapper>
+
+    <Hover/>
+    </>
   );
 }
 
