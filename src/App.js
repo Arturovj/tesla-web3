@@ -12,6 +12,8 @@ import Menu from "./components/Menu/Menu";
 import Home from "./components/Pages/Home";
 import QuadCanvas from "./components/Quad/Quad";
 import TequilaCanvas from "./components/Tequila/Tequila";
+import Cybetruck from "./components/Cybertruck/Cybetruck";
+import RobotCanvas from "./components/Robot/Robot";
 
 
 function App() {
@@ -27,8 +29,8 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/cyberquad" element={<QuadCanvas/>}></Route>
         <Route path="/tequila" element={<TequilaCanvas/>}></Route>
-        <Route path="/cybertruck" element={""}></Route>
-        <Route path="/robot" element={""}></Route>
+        <Route path="/cybertruck" element={<Cybetruck/>}></Route>
+        <Route path="/robot" element={<RobotCanvas/>}></Route>
 
       </Routes>
 
