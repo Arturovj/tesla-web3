@@ -1,14 +1,20 @@
 import React from 'react'
 import Footer from '../components/footer'
 import Icon from '../components/icons'
+import teslalogo from './teslalogo.png'
+import './teslalogo.css'
+
 
 export function FooterContainer() {
     return (
         <Footer>
             <Footer.Wrapper>
             <Footer.Row>
+            <img className='teslalogo' src={teslalogo}></img>
+          
                 <Footer.Column>
                 <Footer.Title>About Us</Footer.Title>
+                    <Footer.Link href="#">Contack us</Footer.Link>
                     <Footer.Link href="#">Story</Footer.Link>
                     <Footer.Link href="#">Clients</Footer.Link>
                     <Footer.Link href="#">Testimonials</Footer.Link>
@@ -20,13 +26,8 @@ export function FooterContainer() {
                     <Footer.Link href="#">Development</Footer.Link>
                     <Footer.Link href="#">Design</Footer.Link>
                 </Footer.Column>
-                <Footer.Column>
-                <Footer.Title>Contact Us</Footer.Title>
-                    <Footer.Link href="#">United States</Footer.Link>
-                    <Footer.Link href="#">United Kingdom</Footer.Link>
-                    <Footer.Link href="#">Australia</Footer.Link>
-                    <Footer.Link href="#">Support</Footer.Link>
-                </Footer.Column>
+               
+               
                 <Footer.Column>
                 <Footer.Title>Social</Footer.Title>
                     <Footer.Link href="#"><Icon className="fab fa-facebook-f" />Facebook</Footer.Link>

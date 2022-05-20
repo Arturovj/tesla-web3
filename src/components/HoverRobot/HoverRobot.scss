@@ -32,7 +32,7 @@
     }
   }
   
-  .left, .center, .right, .lefterRobot, .righterRobot{
+  .leftRobot, .center, .right, .lefterRobot, .righterRobot{
     width: 200px;
     height: 150px;
    
@@ -72,7 +72,7 @@
     transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
     background-image: url(https://cdn4.iconfinder.com/data/icons/mosaicon-05/512/info-256.png);
   }
-  .left {
+  .leftRobot {
     transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
     background-image: url(https://cdn4.iconfinder.com/data/icons/modern-technologies-1/32/technology_Home_Robot_Assistants-256.png);
   }
