@@ -10,7 +10,7 @@ import { motion } from 'framer-motion/dist/framer-motion'
 
 // import World from "../GLTF/World";
 import Robot from "../GLTF/Robot";
-import Hover from "../Hover/Hover";
+import HoverRobot from "../HoverRobot/HoverRobot";
 
 
 export default function RobotCanvas() {
@@ -30,7 +30,7 @@ export default function RobotCanvas() {
         </Suspense>
         </Canvas>
     </Wrapper>
-    <Hover/>
+    <HoverRobot/>
     </motion.div>
     </>
   );

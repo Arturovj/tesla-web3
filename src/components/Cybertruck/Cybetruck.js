@@ -1,7 +1,7 @@
 import React from 'react'
-import Hover from '../Hover/Hover'
 import WorldCanvas from '../World/WorldCanvas'
 import { motion } from 'framer-motion/dist/framer-motion'
+import HoverCybertruck from '../HoverCybertruck/HoverCybertruck'
 
 export default function Cybetruck() {
   return (
@@ -10,7 +10,7 @@ export default function Cybetruck() {
       animate={{ opacity : 1}}
       exit={{ opacity : 0}}>
     <WorldCanvas/>
-    <Hover/>
+    <HoverCybertruck/>
     </motion.div>
     </>
   )

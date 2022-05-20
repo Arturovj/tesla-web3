@@ -9,7 +9,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 
 // import World from "../GLTF/World";
 import Quad from "../GLTF/Quad";
-import Hover from "../Hover/Hover";
+import HoverCyberquad from "../HoverCyberquad/HoverCyberquad";
 
 export default function QuadCanvas() {
 
@@ -40,7 +40,7 @@ export default function QuadCanvas() {
         </Canvas>
       </Wrapper>
 
-      <Hover />
+      <HoverCyberquad />
       </motion.div>
     </>
   );
