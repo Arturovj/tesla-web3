@@ -14,7 +14,7 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/tequila.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+      <group rotation={[-Math.PI / 2, 0, 4.2]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh position={[-0.2, -1.9, -0.2]} scale={0.129}>
           <group position={[-0.27, 6.16, -4.6]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
