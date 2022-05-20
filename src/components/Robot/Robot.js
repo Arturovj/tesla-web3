@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { motion } from 'framer-motion/dist/framer-motion'
 
 
 
@@ -15,6 +16,9 @@ import Hover from "../Hover/Hover";
 export default function RobotCanvas() {
   return (
       <>
+      <motion.div  initial={{ opacity : 0 }}
+      animate={{ opacity : 1}}
+      exit={{ opacity : 0}}>
     <Wrapper className="robot">
       <Canvas clasName="canvas">
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
@@ -27,6 +31,7 @@ export default function RobotCanvas() {
         </Canvas>
     </Wrapper>
     <Hover/>
+    </motion.div>
     </>
   );
 }

@@ -6,7 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 
-
+import { motion } from "framer-motion/dist/framer-motion";
 // import World from "../GLTF/World";
 import Tequila from "../GLTF/Tequila";
 import Hover from "../Hover/Hover";
@@ -15,6 +15,9 @@ import Hover from "../Hover/Hover";
 export default function TequilaCanvas() {
   return (
       <>
+      <motion.div  initial={{ opacity : 0 }}
+      animate={{ opacity : 1}}
+      exit={{ opacity : 0}}>
     <Wrapper className="tequila">
       <Canvas clasName="canvas">
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
@@ -28,6 +31,7 @@ export default function TequilaCanvas() {
     </Wrapper>
 
     <Hover/>
+    </motion.div>
     </>
   );
 }
