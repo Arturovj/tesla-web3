@@ -6,6 +6,7 @@
 }
 
 .loading-home{
+    margin-top: 80px;
     left: 50%;
     height: 500px;
     display:grid;
