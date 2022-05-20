@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import "./Quad.css";
 import styled from "styled-components";
 
@@ -10,55 +10,39 @@ import { motion } from "framer-motion/dist/framer-motion";
 // import World from "../GLTF/World";
 import Quad from "../GLTF/Quad";
 import Hover from "../Hover/Hover";
-import { GridLoader } from "react-spinners";
 
 export default function QuadCanvas() {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
 
+
+
+
+    
   return (
-    
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-          <div className="loading-quad">
-        {loading ? (
-          <GridLoader color={"#D0021B"} loading={loading} size={100} />
-        ) : (
-          <Wrapper className="quad">
-            <Canvas clasName="canvas">
-              <OrbitControls
-                enableZoom={false}
-                autoRotate
-                autoRotateSpeed={1.5}
-              />
-              <ambientLight intensity={5} />
-              <spotLight
-                intensity={10}
-                angle={20}
-                penumbra={0.01}
-                position={[-10, 20, -5]}
-                castShadow
-              ></spotLight>
-              <directionalLight position={[-1, 5, 1]} />
-              <Suspense fallback={null}>
-                <Quad />
-              </Suspense>
-            </Canvas>
-          </Wrapper>
-        )}
-        </div>
+    <>
+    <motion.div  initial={{ opacity : 0 }}
+      animate={{ opacity : 1}}
+      exit={{ opacity : 0}}>
+      <Wrapper className="quad">
+        <Canvas clasName="canvas">
+          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
+          <ambientLight intensity={5} />
+          <spotLight
+            intensity={10}
+            angle={20}
+            penumbra={0.01}
+            position={[-10, 20, -5]}
+            castShadow
+          ></spotLight>
+          <directionalLight position={[-1, 5, 1]} />
+          <Suspense fallback={null}>
+            <Quad />
+          </Suspense>
+        </Canvas>
+      </Wrapper>
 
-        <Hover />
+      <Hover />
       </motion.div>
-    
+    </>
   );
 }
 

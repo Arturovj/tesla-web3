@@ -28,11 +28,14 @@ export default function Home() {
           {loading ? (
             <GridLoader color={"#D0021B"} loading={loading} size={100} />
           ) : (
+              <div>
             <WorldCanvas />
+            <Hover />
+            </div>
           )}
         </div>
 
-        <Hover />
+        
       </motion.div>
     
   );

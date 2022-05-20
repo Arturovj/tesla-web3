@@ -12,7 +12,7 @@ import { AnimatePresence } from 'framer-motion/dist/framer-motion'
 export default function AnimatedRoutes() {
   const location = useLocation();
   return (
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />}></Route>
       <Route path="/cyberquad" element={<QuadCanvas />}></Route>

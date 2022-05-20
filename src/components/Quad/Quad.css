@@ -1,6 +1,5 @@
 .loading-quad{
     left: 50%;
-    height: 500px;
     display:grid;
     justify-content: center;
     align-items: center;
