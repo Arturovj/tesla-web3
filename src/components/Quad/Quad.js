@@ -22,7 +22,7 @@ export default function QuadCanvas() {
   }, []);
 
   return (
-    <>
+    
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ export default function QuadCanvas() {
 
         <Hover />
       </motion.div>
-    </>
+    
   );
 }
 
