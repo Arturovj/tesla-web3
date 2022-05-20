@@ -18,25 +18,14 @@ export default function Home() {
 
   return (
     
-      <motion.div className="Home"
-      initial={{ opacity : 0 }}
-      animate={{ opacity : 1}}
-      exit={{ opacity : 0}}
-      
-      >
-        <div className="loading-home">
-          {loading ? (
-            <GridLoader color={"#D0021B"} loading={loading} size={100} />
-          ) : (
-              <div>
-            <WorldCanvas />
-            <Hover />
-            </div>
-          )}
-        </div>
-
-        
-      </motion.div>
+    <>
+    <motion.div  initial={{ opacity : 0 }}
+   animate={{ opacity : 1}}
+   exit={{ opacity : 0}}>
+ <WorldCanvas/>
+ <Hover/>
+ </motion.div>
+ </>
     
   );
 }

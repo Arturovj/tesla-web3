@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 
   canvas {
     height: 500px;
-    width: auto;
+    width: 100%;
     
   }
 `;
