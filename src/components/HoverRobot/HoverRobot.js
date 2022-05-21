@@ -8,7 +8,7 @@ export default function HoverRobot() {
 <div className="lefterRobot">
   <div className="text"></div>
 </div>
-<div className="left">
+<div className="leftRobot">
   <div className="text"></div>
 </div>
 <div className="center">

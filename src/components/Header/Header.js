@@ -3,6 +3,8 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
+import NavbarEffect4 from '../Navbar/base/effect4/NavbarEfecto4'
+
 
 export default function Header({ isMenuOpen, setIsMenuOpen}) {
   return (
@@ -16,11 +18,16 @@ export default function Header({ isMenuOpen, setIsMenuOpen}) {
             </Link>
         </div>
         <div className='header__links'>
-            <Link to="/cybertruck"> Cybertruck </Link>
+
+            <NavbarEffect4/>
+            
+            {/* <Link to="/cybertruck"> Cybertruck </Link>
             <Link to="/cyberquad"> CyberQuad </Link>
             <Link to="/robot"> Robot </Link>
-            <Link to="/tequila"> Tequila </Link>
+            <Link to="/tequila"> Tequila </Link> */}
+            
         </div>
+        
         <div className='header__right'>
             <Link to="/" className={isMenuOpen && 'header__link--hidden'}> Shop </Link>
             <Link to="/login" className={isMenuOpen && 'header__link--hidden'}> Tesla Account</Link>
