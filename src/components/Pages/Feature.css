@@ -1,0 +1,39 @@
+.service-section .icon-box {
+	margin-bottom: 20px;
+	padding: 30px;
+	border-radius: 6px;
+	background-color: #f8f9fa;
+}
+.service-section .icon-box:hover .service-title a {
+	color: #41A1FD;
+}
+.service-section .icon-box .service-icon {
+	float: left;
+	color: #41A1FD;
+	font-size: 40px;
+}
+.service-section .icon-box .service-title {
+	margin-left: 70px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 1.2;
+}
+.service-section .icon-box .service-title a {
+	color: #556270;
+	transition: 0.3s;
+	text-decoration: none;
+}
+.service-section .icon-box .service-para {
+	margin-left: 70px;
+	line-height: 24px;
+	font-size: 14px;
+}
+.service-section .service-main-heading {
+	color: #556270;
+	padding: 0;
+	margin-bottom: 20px;
+	line-height: 1;
+	font-size: 60px;
+	font-weight: 600;
+}

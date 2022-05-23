@@ -7,6 +7,7 @@ import Hover from "../Hover/Hover";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion/dist/framer-motion";
 import TeslaCanvas from "../Tesla/Tesla";
+import Feature from "./Feature";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -26,6 +27,7 @@ export default function Home() {
       >
         <TeslaCanvas />
         <Hover />
+        <Feature/>
       </motion.div>
     </>
   );

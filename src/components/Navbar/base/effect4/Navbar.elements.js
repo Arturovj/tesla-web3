@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 70px;
-  margin-right: 80px;
+  margin-right: 35px;
 `;
 
 export const Wrapper = styled.div`
@@ -24,6 +24,7 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
+ margin-left: 15px;
   width: 80px;
   height: 100%;
   display: flex;
