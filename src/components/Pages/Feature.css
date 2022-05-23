@@ -5,11 +5,11 @@
 	background-color: #f8f9fa;
 }
 .service-section .icon-box:hover .service-title a {
-	color: #41A1FD;
+	color: #E82127;
 }
 .service-section .icon-box .service-icon {
 	float: left;
-	color: #41A1FD;
+	color: #E82127;
 	font-size: 40px;
 }
 .service-section .icon-box .service-title {

@@ -14,9 +14,9 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/tesla.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, -0.12, 0]}>
+      <group rotation={[-Math.PI / 2, -0.11, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.2}>
-        <mesh position={[-0.1, -3, 0.1]} scale={0.1}
+        <mesh position={[-0.1, -5, 0.1]} scale={0.1}
        >
           <group position={[-50.46, 48.89, 2.15]} rotation={[0, 0, Math.PI / 2]}>
             <mesh geometry={nodes['Obj3d66-806492-1-240_Obj3d66-806492-1-240_mtl_0'].geometry} material={materials['Obj3d66-806492-1-240_mtl']} />

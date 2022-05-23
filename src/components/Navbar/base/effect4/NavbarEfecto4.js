@@ -35,7 +35,7 @@ const NavbarEffect4 = () => {
               <MenuItemLink bgColor={"#fa0ff0"}><Link style={{textDecoration: 'none', color: 'black'}} to="/robot">ROBOT</Link></MenuItemLink>
             </MenuItem>
             <MenuItem>
-              <MenuItemLink bgColor={"#ffff00"}><Link style={{textDecoration: 'none', color: 'black'}} to="/tequila">TEQUILA</Link></MenuItemLink>
+              <MenuItemLink bgColor={"#ffff00"}><Link style={{textDecoration: 'none', color: 'black'}} to="/tequila">TQUILA</Link></MenuItemLink>
             </MenuItem>
           </Menu>
         </Wrapper>
