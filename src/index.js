@@ -11,15 +11,20 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { UserContextProvider } from './contexts/userContext';
 
 ReactDOM.render(
+  <UserContextProvider>
   <Router>
   <React.StrictMode>
     {/* <Provider store={store}> */}
+    
       <App />
     {/* </Provider> */}
+    
   </React.StrictMode>
-  </Router>,
+  </Router>
+  </UserContextProvider>,
   document.getElementById('root')
 );
 
