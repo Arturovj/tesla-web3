@@ -2,6 +2,7 @@ import React from "react";
 import GridLoader from "react-spinners/GridLoader";
 import "./Home.css";
 
+
 import Hover from "../Hover/Hover";
 // import WorldCanvas from "../World/WorldCanvas";
 import { useState, useEffect } from "react";
@@ -25,6 +26,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
+    
         <TeslaCanvas />
         <Hover />
         <Feature/>

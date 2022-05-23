@@ -5,7 +5,7 @@ export default function Feature() {
   return (
     <>
     
-    <div className="service-section py-5">
+    <div className="service-section py-5" id='features'>
   <div className="container">
     <div className="row justify-content-center py-3">
       <div className="col-md-8 col-12 text-center">
