@@ -1,5 +1,6 @@
 import React from "react";
 import './ItemCard.scss'
+import { Link } from "react-router-dom"
 
 export default function ItemCard({ product }) {
   return (
@@ -12,11 +13,11 @@ export default function ItemCard({ product }) {
     //   </p>
     // </div>
 
-
+<Link to={`/producto/${product.id}`}>
 <section className="light">
 	<div className="container py-2">
 		<div className="h1 text-center text-dark" id="pageHeaderTitle"></div>
-
+        
 		<article className="postcard light blue">
 			<a className="postcard__img_link" href="#">
 				<img className="postcard__img" src={product.images[0]} alt={product.name} />
@@ -34,13 +35,15 @@ export default function ItemCard({ product }) {
 					<li className="tag__item"><i className="fas fa-tag mr-2"></i>{product.price.unit_amount/100}</li>
 					<li className="tag__item"><i className="fas fa-clock mr-2"></i>{product.price.currency}</li>
 					<li className="tag__item play blue">
-						<a href="#"><i className="fas fa-play mr-2"></i>Play Episode</a>
+						<a href="#"><i className="fas fa-play mr-2"></i>Buy {product.name}</a>
 					</li>
 				</ul>
 			</div>
 		</article>
+        
         </div>
         </section>
+        </Link>
 
   );
 }

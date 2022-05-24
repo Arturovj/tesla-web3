@@ -12,6 +12,7 @@ import Producto from "./Pages/Producto/Producto";
 import Perfil from "./Pages/Perfil/Perfil";
 import Login from "./Pages/Login/Login";
 import Shop from "./Pages/Shop/Shop";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 
 export default function AnimatedRoutes() {
@@ -31,7 +32,7 @@ export default function AnimatedRoutes() {
       <Route path="/tequila" element={<TequilaCanvas />}></Route>
       <Route path="/cybertruck" element={<Cybetruck />}></Route>
       <Route path="/robot" element={<RobotCanvas />}></Route>
-      <Route path="*" element={""}></Route>
+      <Route path="*" element={<ErrorPage/>}></Route>
     </Routes>
     </AnimatePresence>
   );
