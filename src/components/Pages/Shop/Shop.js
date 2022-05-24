@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import getActiveProducts from "../../../functions/getActiveProducts";
 import ItemCard from "../../ItemCard/ItemCard";
+import './Shop.css'
 import { motion } from "framer-motion/dist/framer-motion";
 
 export default function Shop() {
@@ -14,6 +15,8 @@ export default function Shop() {
     getProducts();
   }, []);
 
+
+
   return (
     <motion.div
     initial={{ opacity: 0 }}
@@ -22,7 +25,7 @@ export default function Shop() {
   >
     <div>
       <ul>
-        {productos ? productos.map((p) => <li key={p.id}>
+        {productos ? productos.map((p) => <li style={{color:"white"}} key={p.id}>
 
         <ItemCard product={p} />
 

@@ -13,9 +13,11 @@ export default function ItemCard({ product }) {
     //   </p>
     // </div>
 
-<Link to={`/producto/${product.id}`}>
-<section className="light">
+
+<section style={{}} className="light">
+
 	<div className="container py-2">
+    <Link to={`/producto/${product.id}`}>
 		<div className="h1 text-center text-dark" id="pageHeaderTitle"></div>
         
 		<article className="postcard light blue">
@@ -33,18 +35,19 @@ export default function ItemCard({ product }) {
 				<div className="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
 				<ul className="postcard__tagbox">
 					<li className="tag__item"><i className="fas fa-tag mr-2"></i>{product.price.unit_amount/100}</li>
-					<li className="tag__item"><i className="fas fa-clock mr-2"></i>{product.price.currency}</li>
+					<li className="tag__item"><i className="fas fa-euro-sign mr-2"></i>{product.price.currency}</li>
 					<li className="tag__item play blue">
-						<a href="#"><i className="fas fa-play mr-2"></i>Buy {product.name}</a>
+						<a href="#"><i className="fas fa-shopping-cart mr-2"></i>Buy {product.name}</a>
 					</li>
 				</ul>
 			</div>
 		</article>
-        
-        </div>
-        </section>
         </Link>
-
+        </div>
+        
+        </section>
+        
+            
   );
 }
 

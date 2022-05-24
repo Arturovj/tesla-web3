@@ -20,6 +20,10 @@ $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 
 }
 
+li {
+  text-decoration: none;
+}
+
 a, a:hover {
 	text-decoration: none;
 	transition: color 0.3s ease-in-out;

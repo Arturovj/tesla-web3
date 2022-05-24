@@ -12,8 +12,10 @@ import {
   Redirect,
 } from "react-router-dom";
 import { UserContextProvider } from './contexts/userContext';
+import { CarritoContextProvider } from './contexts/carritoContext';
 
 ReactDOM.render(
+  <CarritoContextProvider>
   <UserContextProvider>
   <Router>
   <React.StrictMode>
@@ -24,7 +26,8 @@ ReactDOM.render(
     
   </React.StrictMode>
   </Router>
-  </UserContextProvider>,
+  </UserContextProvider>
+  </CarritoContextProvider>,
   document.getElementById('root')
 );
 
