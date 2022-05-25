@@ -1,17 +1,20 @@
 import React from 'react'
+import { Navigate } from 'react-router-dom';
 import { useCarritoContext } from '../../../contexts/carritoContext'
 import { useUserContext } from '../../../contexts/userContext';
 
 export default function Carrito() {
     const { carrito } = useCarritoContext();
-    const { user, setUser } = useUserContext()
+    const { user } = useUserContext()
+
 
     function isAuthenticated(){
         if(user){
                  console.log("comprar")
         }
         if (!user){
-              //redireccion a login
+                console.log("you have to login")
+                return <Navigate to="/login" replace />;
         }
     }
 

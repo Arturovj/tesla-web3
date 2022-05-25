@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import getProductById from "../../../functions/getProductById";
 import { useCarritoContext } from "../../../contexts/carritoContext";
 import { useUserContext } from "../../../contexts/userContext";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 export default function Producto() {
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState(null);
   const { carrito, setCarrito } = useCarritoContext();
   const { user } = useUserContext();
+
+
 
   useEffect(() => {
     async function getProductInfo() {
@@ -28,10 +30,11 @@ export default function Producto() {
                 // te dejo comprar
       }
       if (!user){
-            //redireccion a login
+            return <Navigate to="/login" />
       }
-  }
 
+  }
+  console.log(user)
   return (
     <>
       <div>

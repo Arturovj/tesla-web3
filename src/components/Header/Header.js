@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 import NavbarEffect4 from '../Navbar/base/effect4/NavbarEfecto4'
+import { useUserContext } from '../../contexts/userContext';
+
 
 
 export default function Header({ isMenuOpen, setIsMenuOpen}) {
+const { user } = useUserContext()
+    
+
   return (
     <div className='header'>
         <div className='header__logo'>
@@ -29,8 +34,10 @@ export default function Header({ isMenuOpen, setIsMenuOpen}) {
         </div>
         
         <div className='header__right'>
+            {!user ? <Link to="login" > Login</Link> : ""}
+            
             <Link to="/shop" className={isMenuOpen && 'header__link--hidden'}> Shop </Link>
-            <Link to="/login" className={isMenuOpen && 'header__link--hidden'}> Tesla Account</Link>
+            <Link to="/perfil" className={isMenuOpen && 'header__link--hidden'}> Tesla Account</Link>
             <div className='header__menu' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
             </div>
