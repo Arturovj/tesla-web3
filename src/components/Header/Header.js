@@ -37,7 +37,7 @@ const { user } = useUserContext()
             {!user ? <Link to="login" > Login</Link> : ""}
             
             <Link to="/shop" className={isMenuOpen && 'header__link--hidden'}> Shop </Link>
-            <Link to="/perfil" className={isMenuOpen && 'header__link--hidden'}> Tesla Account</Link>
+            <Link to="/perfil" className={isMenuOpen && 'header__link--hidden'}>Account</Link>
             <div className='header__menu' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
             </div>
