@@ -26,7 +26,11 @@ export default function Carrito() {
     <div>
         Tu Carrito:
         {carrito.map((producto) => (
+            <div>
+                <img src={producto.images[0]} alt={producto.name} />
         <p>{producto.name}</p>
+        </div>
+        
     ))}
 
             <button onClick={isAuthenticated}>BUY</button>

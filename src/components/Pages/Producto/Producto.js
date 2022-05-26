@@ -4,6 +4,7 @@ import { useCarritoContext } from "../../../contexts/carritoContext";
 import { useUserContext } from "../../../contexts/userContext";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import createCheckoutSession from "../../../functions/createCheckoutSession";
+import './Producto.css'
 
 export default function Producto() {
   const { id } = useParams();
@@ -40,10 +41,12 @@ export default function Producto() {
   console.log(user)
   return (
     <>
+    <div className="producto-container">
       <div>
         Producto: {productInfo?.name}
-        <img src={productInfo?.images[0]} alt={productInfo?.name} />
+       
       </div>
+      <div> <img src={productInfo?.images[0]} alt={productInfo?.name} /></div>
 
       <button onClick={addToCart}>Añadir a carrito</button>
 
@@ -51,6 +54,7 @@ export default function Producto() {
         <Link to="/carrito">
       <button>Carrito</button>
       </Link>
+      </div>
     </>
   );
 }
