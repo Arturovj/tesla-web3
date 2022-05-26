@@ -19,8 +19,8 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginEmail(email, password);
-    createCheckoutSession(user.uid, carrito)
     navigate("/perfil");
+    // createCheckoutSession(user.uid, carrito)
   }
 
   return (
