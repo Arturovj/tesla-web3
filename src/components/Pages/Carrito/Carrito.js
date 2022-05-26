@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useCarritoContext } from '../../../contexts/carritoContext'
 import { useUserContext } from '../../../contexts/userContext';
 import createCheckoutSession from '../../../functions/createCheckoutSession';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Carrito() {
     const { carrito } = useCarritoContext();
@@ -14,6 +16,15 @@ export default function Carrito() {
     function isAuthenticated(){
         if(user){
             createCheckoutSession(user.uid, carrito)
+            toast.success('Redirecting!', {
+                position: "top-center",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         }
         if (!user){
                 console.log("you have to login")
@@ -24,6 +35,17 @@ export default function Carrito() {
   return (
 
     <div>
+        <ToastContainer
+position="top-center"
+autoClose={7000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
         Tu Carrito:
         {carrito.map((producto) => (
             <div>

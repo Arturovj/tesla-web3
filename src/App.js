@@ -8,6 +8,8 @@ import Menu from "./components/Menu/Menu";
 
 import { FooterContainer } from "./containers/footer";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +22,7 @@ function App() {
       <AnimatedRoutes />
 
       <FooterContainer />
+      <ToastContainer/>
     </div>
   );
 }
