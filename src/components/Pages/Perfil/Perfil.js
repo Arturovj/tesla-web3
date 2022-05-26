@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../../../firebase/credenciales";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import getPaymentByUID from "../../../functions/getPaymentsByUID";
 import { useUserContext } from "../../../contexts/userContext";
@@ -24,12 +26,36 @@ export default function Perfil() {
 
   function logout() {
     signOut(auth);
-    navigate("/");
+    toast.info('See you soon!', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })
+        setTimeout(() => {
+            navigate("/");
+          }, 2000);
   }
 
   return(
       
-    <> <div className="profile-container">
+    <>
+    <ToastContainer
+position="top-center"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
+    
+     <div className="profile-container">
     
     
     {user ?  (<div>
