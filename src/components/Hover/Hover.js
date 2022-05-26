@@ -1,8 +1,13 @@
 import React from "react";
 import "./Hover.scss";
 import { Link as Scroll } from "react-scroll";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Hover() {
+  let navigate = useNavigate()
+
+  
+
   return (
     <>
       <div className="all">
@@ -28,7 +33,19 @@ export default function Hover() {
         </div>
 
         <div className="left">
+          <Link to="/shop">
+          <div className="text"></div><span style={{
+              visibility: 'hidden'
+            }}>FEATURESSSSSSSSSS<br/>
+            FEATURESSSSSSSSSS<br/>
+            FEATURESSSSSSSSSS<br/>
+            FEATURESSSSSSSSSS<br/>
+            FEATURESSSSSSSSSS<br/>
+            FEATURESSSSSSSSSS<br/>
+            </span>
+          
           <div className="text"></div>
+          </Link>
         </div>
         <div className="center">
           <div className="explainer">
