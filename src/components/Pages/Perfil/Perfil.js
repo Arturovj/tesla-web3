@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import getPaymentByUID from "../../../functions/getPaymentsByUID";
 import { useUserContext } from "../../../contexts/userContext";
+import PerfilCanvas from "../../Perfil/PerfilRobot";
+import './Perfil.css'
 
 export default function Perfil() {
   const { user } = useUserContext();
@@ -27,14 +29,18 @@ export default function Perfil() {
 
   return(
       
-    <>{user ?  (<div>
+    <> <div className="profile-container">
+    
+    
+    {user ?  (<div>
         <div>Perfil</div>
         <div>Welcome {user.email} - {user.uid}</div>
 
         {/* {payments.length > 0 && payments.map((payment )=>{payment.amount/100})} */}
-  
+       <div className="canvas"> <PerfilCanvas/> </div>
         <button onClick={logout}>Cerrar Sesión</button>
         </div> ):( "LOGIN PLEASE")}
+        </div>
       
     </>
   );
