@@ -34,7 +34,7 @@ const { user } = useUserContext()
         </div>
         
         <div className='header__right'>
-            {!user ? <Link to="login" > Login</Link> : ""}
+            {!user ? <Link to="login" > Login</Link> : <Link to="/perfil" > Logout</Link>}
             
             <Link to="/shop" className={isMenuOpen && 'header__link--hidden'}> Shop </Link>
             <Link to="/perfil" className={isMenuOpen && 'header__link--hidden'}>Account</Link>

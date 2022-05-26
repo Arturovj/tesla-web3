@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
 import getProductById from "../../../functions/getProductById";
 import { useCarritoContext } from "../../../contexts/carritoContext";
 import { useUserContext } from "../../../contexts/userContext";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import createCheckoutSession from "../../../functions/createCheckoutSession";
 
 export default function Producto() {
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState(null);
   const { carrito, setCarrito } = useCarritoContext();
   const { user } = useUserContext();
+  let navigate = useNavigate();
 
 
 
@@ -23,14 +24,16 @@ export default function Producto() {
 
   function addToCart() {
     setCarrito([...carrito, productInfo]);
+    navigate("/carrito")
   }
 
   function isAuthenticated(){
       if(user){
-                // te dejo comprar
+          addToCart()
+          createCheckoutSession(user.uid, carrito)
       }
       if (!user){
-            return <Navigate to="/login" />
+           navigate("/login")
       }
 
   }
