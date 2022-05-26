@@ -1,21 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { auth } from "../../../firebase/credenciales";
 import { signOut } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
+import getPaymentByUID from "../../../functions/getPaymentsByUID";
+import { useUserContext } from "../../../contexts/userContext";
 
 export default function Perfil() {
-    let navigate = useNavigate();
+  const { user } = useUserContext();
+  const [payments, setPayments] = useState([]);
+  let navigate = useNavigate();
 
-
-    function logout() {
-        signOut(auth);
-        navigate('/')
+  useEffect(() => {
+    async function getPayments() {
+      if (!user) return;
+      const payments = await getPaymentByUID(user.uid);
+      setPayments(payments);
     }
-  return (<>
-    <div>Perfil</div>
+    getPayments();
+  }, [user]);
 
+  function logout() {
+    signOut(auth);
+    navigate("/");
+  }
 
-    <button onClick={logout}>Cerrar Sesión</button>
+  return(
+      
+    <>{user ?  (<div>
+        <div>Perfil</div>
+        <div>Welcome {user.email} - {user.uid}</div>
+
+        {/* {payments.length > 0 && payments.map((payment )=>{payment.amount/100})} */}
+  
+        <button onClick={logout}>Cerrar Sesión</button>
+        </div> ):( "LOGIN PLEASE")}
+      
     </>
-  )
+  );
 }

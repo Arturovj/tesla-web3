@@ -2,8 +2,16 @@ import React from "react";
 import loginEmail from "../../../functions/loginEmail";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import createCheckoutSession from "../../../functions/createCheckoutSession";
+import { useCarritoContext } from "../../../contexts/carritoContext";
+import { useUserContext } from "../../../contexts/userContext";
+
 
 export default function Login() {
+    const { carrito } = useCarritoContext()
+    const { user, setUser } = useUserContext()
+
+
   let navigate = useNavigate();
 
   function login(e) {
@@ -11,6 +19,7 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginEmail(email, password);
+    createCheckoutSession(user.uid, carrito)
     navigate("/perfil");
   }
 

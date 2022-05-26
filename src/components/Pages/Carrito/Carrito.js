@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { useCarritoContext } from '../../../contexts/carritoContext'
 import { useUserContext } from '../../../contexts/userContext';
+import createCheckoutSession from '../../../functions/createCheckoutSession';
 
 export default function Carrito() {
     const { carrito } = useCarritoContext();
@@ -12,7 +13,7 @@ export default function Carrito() {
 
     function isAuthenticated(){
         if(user){
-                 console.log("comprar")
+            createCheckoutSession(user.uid, carrito)
         }
         if (!user){
                 console.log("you have to login")
