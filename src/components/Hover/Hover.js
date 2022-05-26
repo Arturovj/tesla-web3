@@ -16,7 +16,7 @@ export default function Hover() {
             to="features"
             spy={true}
             smooth={true}
-            offset={40}
+            offset={10}
             duration={500}
           >
             <div className="text"></div><span style={{
