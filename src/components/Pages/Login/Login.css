@@ -9,6 +9,7 @@
 	background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff);
 }
 .main{
+    margin-bottom: 100px;
 	width: 350px;
 	height: 500px;
 	background: red;
