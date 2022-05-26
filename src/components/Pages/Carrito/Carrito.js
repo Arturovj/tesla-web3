@@ -8,6 +8,7 @@ export default function Carrito() {
     const { user } = useUserContext()
     let navigate = useNavigate();
 
+    console.log(carrito)
 
     function isAuthenticated(){
         if(user){

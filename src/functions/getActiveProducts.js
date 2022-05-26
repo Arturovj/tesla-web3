@@ -13,6 +13,7 @@ export default async function (){
         producto.id = snap.id;
         const precioSnaps = await getDocs(collection(snap.ref, "prices"));
         producto.price = precioSnaps.docs[0].data()
+        producto.priceId = precioSnaps.docs[0].id;
         productos.push(producto)
     }
 
