@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './ItemCard.scss'
 import { Link } from "react-router-dom"
+import { ClipLoader } from "react-spinners";
 
 export default function ItemCard({ product }) {
+
+
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+    }, []);
+
+
+
   return (
     // <div>
     //   <img src={product.images[0]} alt={product.name}></img>
@@ -21,9 +34,17 @@ export default function ItemCard({ product }) {
 		<div className="h1 text-center text-dark" id="pageHeaderTitle"></div>
         
 		<article className="postcard light blue">
-			<a className="postcard__img_link" href="#">
+        <a className="postcard__img_link" href="#">
+            {loading ? <div className="item-loader" >
+                <ClipLoader
+                color="red"
+                size={50}
+            
+            /></div> :
 				<img className="postcard__img" src={product.images[0]} alt={product.name} />
-			</a>
+			}
+            </a>
+			
 			<div className="postcard__text t-dark">
 				<h1 className="postcard__title blue"><a href="#">{product.name}</a></h1>
 				<div className="postcard__subtitle small">

@@ -16,6 +16,18 @@ $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 }
 
 
+.item-loader{
+  text-align: center;
+  display:grid;
+  justify-content: center;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+
+}
+
+
 .light {
 
 }
@@ -363,3 +375,5 @@ a, a:hover {
 		);
 	}
 }
+
+
