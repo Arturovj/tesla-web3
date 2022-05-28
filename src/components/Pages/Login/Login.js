@@ -1,5 +1,6 @@
 import React from "react";
 import loginEmail from "../../../functions/loginEmail";
+import registerEmail from "../../../functions/registerEmail";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import createCheckoutSession from "../../../functions/createCheckoutSession";
@@ -7,6 +8,7 @@ import { useCarritoContext } from "../../../contexts/carritoContext";
 import { useUserContext } from "../../../contexts/userContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -22,6 +24,8 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginEmail(email, password);
+
+
 
 
 
@@ -43,6 +47,14 @@ export default function Login() {
     // createCheckoutSession(user.uid, carrito)
   }
 
+
+  function register(e) {
+    e.preventDefault();
+const email = e.target.email.value;
+const password = e.target.password.value;
+registerEmail(email, password);
+}
+
   return (
     <>
     <ToastContainer
@@ -61,13 +73,12 @@ pauseOnHover
   <input type="checkbox" id="chk" aria-hidden="true" />
 
   <div className="signup">
-    <form>
+    <form onSubmit={(e) => register(e)}>
       <label for="chk" aria-hidden="true">
         Sign up
       </label>
-      <input type="text" name="txt" placeholder="User name" required="" />
-      <input type="email" name="email" placeholder="Email" required="" />
-      <input type="password" name="pswd" placeholder="Password" required="" />
+      <input type="text" name="email" placeholder="zample@example.com" />
+      <input type="password" name="password" placeholder="password"  />
       <button>Sign up</button>
     </form>
   </div>
