@@ -73,24 +73,24 @@ pauseOnHover
   <input type="checkbox" id="chk" aria-hidden="true" />
 
   <div className="signup">
-    <form onSubmit={(e) => register(e)}>
-      <label for="chk" aria-hidden="true">
-        Sign up
-      </label>
-      <input type="text" name="email" placeholder="zample@example.com" />
-      <input type="password" name="password" placeholder="password"  />
-      <button>Sign up</button>
-    </form>
-  </div>
-
-  <div className="login">
     <form onSubmit={(e) => login(e)}>
       <label for="chk" aria-hidden="true">
         Login
       </label>
+      <input type="text" name="email" placeholder="zample@example.com" />
+      <input type="password" name="password" placeholder="password"  />
+      <button>Login</button>
+    </form>
+  </div>
+
+  <div className="login">
+    <form onSubmit={(e) => register(e)}>
+      <label for="chk" aria-hidden="true">
+        Sign up
+      </label>
       <input type="text" name="email" placeholder="example@example.com"></input>
       <input type="password" name="password" placeholder="password"></input>
-      <button>Login</button>
+      <button>Sign Up</button>
     </form>
   </div>
 </div>;

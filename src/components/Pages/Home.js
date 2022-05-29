@@ -7,8 +7,9 @@ import Hover from "../Hover/Hover";
 // import WorldCanvas from "../World/WorldCanvas";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion/dist/framer-motion";
-import TeslaCanvas from "../Tesla/Tesla";
+// import TeslaCanvas from "../Tesla/Tesla";
 import Feature from "./Feature";
+import RedTeslaCanvas from "../Redtesla/Redtesla";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -27,7 +28,8 @@ export default function Home() {
         exit={{ opacity: 0 }}
       >
     
-        <TeslaCanvas />
+        {/* <TeslaCanvas /> */}
+        <RedTeslaCanvas/>
         <Hover />
         <Feature/>
       </motion.div>
