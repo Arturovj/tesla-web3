@@ -14,7 +14,7 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/redtesla.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh position={[-0.1, 0, 0.1]} scale={0.4}>
+      <mesh position={[0, -0.1, 0]} scale={0.4}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
         
