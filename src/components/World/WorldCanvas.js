@@ -15,7 +15,7 @@ export default function WorldCanvas() {
   return (
     <Wrapper className="world">
       <Canvas clasName="canvas">
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5}  />
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7}  />
         <ambientLight intensity={0.01} />
         <spotLight intensity={10} angle={20} penumbra={0.01} position={[-10,20,-5]} castShadow></spotLight>
         <directionalLight position={[-1, 5, 1]} />
