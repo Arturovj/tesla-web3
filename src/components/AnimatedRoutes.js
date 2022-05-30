@@ -17,6 +17,7 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import { auth } from "../firebase/credenciales";
 import { useUserContext } from "../contexts/userContext";
 import { onAuthStateChanged } from "firebase/auth";
+import UnProtectedRoutes from "./Guards/UnProtectedRoutes";
 
 
 export default function AnimatedRoutes() {
@@ -36,7 +37,8 @@ export default function AnimatedRoutes() {
       <Route path="producto/:id" element={<Producto/>}></Route>
       <Route path="/carrito" element={<Carrito/>}></Route>
       <Route path="perfil" element={<Perfil/>}></Route>
-      <Route path="login" element={<Login/>}></Route>
+
+      <Route path="login" element={<UnProtectedRoutes><Login/></UnProtectedRoutes>}></Route>
 
       <Route path="/cyberquad" element={<QuadCanvas />}></Route>
       <Route path="/tequila" element={<TequilaCanvas />}></Route>
