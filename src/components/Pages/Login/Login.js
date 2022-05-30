@@ -26,10 +26,6 @@ export default function Login() {
     const password = e.target.password.value;
     loginEmail(email, password);
 
-
-
-
-
     toast.success('Redirecting!', {
         position: "top-center",
         autoClose: 2000,

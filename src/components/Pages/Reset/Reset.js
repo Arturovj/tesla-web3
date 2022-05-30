@@ -1,11 +1,12 @@
 import React from "react";
 import { useUserContext } from "../../../contexts/userContext";
 import resetPassword from "../../../functions/resetPassword";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 export default function Reset() {
   const { user, setUser } = useUserContext();
-
+    let navigate = useNavigate();
 
     function reset(e) { 
         e.preventDefault();
