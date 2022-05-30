@@ -43,16 +43,16 @@ export default function Producto() {
     <>
     <div className="producto-container">
       <div>
-        Producto: {productInfo?.name}
+        Product: {productInfo?.name}
        
       </div>
       <div> <img src={productInfo?.images[0]} alt={productInfo?.name} /></div>
 
-      <button onClick={addToCart}>Añadir a carrito</button>
+      <button onClick={addToCart}>Add to Cart</button>
 
-      <button onClick={isAuthenticated}>Comprar AHORA</button>
+      <button onClick={isAuthenticated}>Buy Now</button>
         <Link to="/carrito">
-      <button>Carrito</button>
+      <button>Cart</button>
       </Link>
       </div>
     </>
