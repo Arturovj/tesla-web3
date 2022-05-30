@@ -8,11 +8,13 @@ import {
 } from "react-router-dom";
 import { UserContextProvider } from './contexts/userContext';
 import { CarritoContextProvider } from './contexts/carritoContext';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 ReactDOM.render(
   <CarritoContextProvider>
   <UserContextProvider>
   <Router>
+    <ScrollToTop/>
   <React.StrictMode>
     {/* <Provider store={store}> */}
     
