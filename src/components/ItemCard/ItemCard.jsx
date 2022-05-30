@@ -7,12 +7,19 @@ export default function ItemCard({ product }) {
 
 
     const [loading, setLoading] = useState(false);
+
+
     useEffect(() => {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
       }, 1500);
     }, []);
+
+   
+    console.log(product)
+
+   
 
 
 
@@ -53,7 +60,7 @@ export default function ItemCard({ product }) {
 					</time>
 				</div>
 				<div className="postcard__bar"></div>
-				<div className="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<div className="postcard__preview-txt">{product.description}</div>
 				<ul className="postcard__tagbox">
 					<li className="tag__item"><i className="fas fa-tag mr-2"></i>{product.price.unit_amount/100}</li>
 					<li className="tag__item"><i className="fas fa-euro-sign mr-2"></i>{product.price.currency}</li>

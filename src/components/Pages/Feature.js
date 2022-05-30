@@ -1,10 +1,15 @@
 import React from 'react'
 import './Feature.css'
 
+
+
+
+
 export default function Feature() {
+    
   return (
     <>
-    
+   
     <div className="service-section py-5" id='features'>
   <div className="container">
     <div className="row justify-content-center py-3">
@@ -58,6 +63,7 @@ export default function Feature() {
     </div>
   </div>
 </div>
+
     
     </>
   )

@@ -11,6 +11,17 @@ import { motion } from "framer-motion/dist/framer-motion";
 import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
 
+
+const imageAnimate={
+  offscreen:{x:-100, opacity: 0},
+  onscreen:{x:0, opacity:1},
+  transition:{
+      type:"spring",
+  duration:1}
+}
+
+
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -31,7 +42,16 @@ export default function Home() {
         {/* <TeslaCanvas /> */}
         <RedTeslaCanvas/>
         <Hover />
+        <motion.div 
+    initial = {"offscreen"}
+    whileInView={"onscreen"}
+    viewport={{once:false, amount:0.5}}
+    transition={{staggerChildren:0.5}}
+   
+        variants={imageAnimate}
+    >
         <Feature/>
+        </motion.div>
       </motion.div>
     </>
   );
