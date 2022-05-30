@@ -14,6 +14,8 @@ const imageAnimate = {
   },
 };
 
+
+
 export default function Shop() {
   const [productos, setProductos] = useState(null);
 

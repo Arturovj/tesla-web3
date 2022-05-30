@@ -3,6 +3,9 @@ import './ItemCard.scss'
 import { Link } from "react-router-dom"
 import { ClipLoader } from "react-spinners";
 
+
+
+
 export default function ItemCard({ product }) {
 
 
