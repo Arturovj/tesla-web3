@@ -2,7 +2,6 @@ import React from "react";
 import GridLoader from "react-spinners/GridLoader";
 import "./Home.css";
 
-
 import Hover from "../Hover/Hover";
 // import WorldCanvas from "../World/WorldCanvas";
 import { useState, useEffect } from "react";
@@ -11,16 +10,14 @@ import { motion } from "framer-motion/dist/framer-motion";
 import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
 
-
-const imageAnimate={
-  offscreen:{x:-100, opacity: 0},
-  onscreen:{x:0, opacity:1},
-  transition:{
-      type:"spring",
-  duration:1}
-}
-
-
+const imageAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: { x: 0, opacity: 1 },
+  transition: {
+    type: "spring",
+    duration: 1,
+  },
+};
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -38,19 +35,17 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-    
         {/* <TeslaCanvas /> */}
-        <RedTeslaCanvas/>
+        <RedTeslaCanvas />
         <Hover />
-        <motion.div 
-    initial = {"offscreen"}
-    whileInView={"onscreen"}
-    viewport={{once:false, amount:0.5}}
-    transition={{staggerChildren:0.5}}
-   
-        variants={imageAnimate}
-    >
-        <Feature/>
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          variants={imageAnimate}
+        >
+          <Feature />
         </motion.div>
       </motion.div>
     </>

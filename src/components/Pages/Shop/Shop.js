@@ -5,6 +5,18 @@ import './Shop.css'
 import { motion } from "framer-motion/dist/framer-motion";
 import HashLoader from "react-spinners/HashLoader";
 
+
+const imageAnimate = {
+    offscreen: { x: -100, opacity: 0 },
+    onscreen: { x: 0, opacity: 1 },
+    transition: {
+      type: "spring",
+      duration: 5,
+    },
+  };
+
+
+
 export default function Shop() {
   const [productos, setProductos] = useState(null);
 
@@ -39,7 +51,13 @@ export default function Shop() {
       size={100}
       
       /></div>   :
-      
+      <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          variants={imageAnimate}
+        >
       <div>
       <ul>
         {productos ? productos.map((p) => <li style={{color:"white"}} key={p.id}>
@@ -49,6 +67,7 @@ export default function Shop() {
         </li>) : null}
       </ul>
     </div>
+    </motion.div>
     
       
       }
