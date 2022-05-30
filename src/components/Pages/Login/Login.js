@@ -8,6 +8,7 @@ import { useCarritoContext } from "../../../contexts/carritoContext";
 import { useUserContext } from "../../../contexts/userContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -80,6 +81,7 @@ pauseOnHover
       <input type="text" name="email" placeholder="zample@example.com" />
       <input type="password" name="password" placeholder="password"  />
       <button>Login</button>
+      <Link to="/reset">Reset Password</Link> 
     </form>
   </div>
 
@@ -91,6 +93,7 @@ pauseOnHover
       <input type="text" name="email" placeholder="example@example.com"></input>
       <input type="password" name="password" placeholder="password"></input>
       <button>Sign Up</button>
+     
     </form>
   </div>
 </div>;
