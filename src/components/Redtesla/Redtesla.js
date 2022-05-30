@@ -21,7 +21,7 @@ export default function RedTeslaCanvas() {
       exit={{ opacity : 0}}>
       <Wrapper className="quad">
         <Canvas clasName="canvas">
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
+          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />
           <ambientLight intensity={1.5} />
           <spotLight
             intensity={3}
