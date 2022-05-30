@@ -111,11 +111,14 @@ export default function Login() {
               <input
                 type="text"
                 name="email"
-                placeholder="zample@example.com"
+                placeholder="example@example.com"
               />
               <input type="password" name="password" placeholder="password" />
               <button>Login</button>
-              <Link to="/reset">Reset Password</Link>
+              <div className="reset">
+              <Link  to="/reset">Reset Password</Link>
+              </div>
+              
             </form>
           </div>
 

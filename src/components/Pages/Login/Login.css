@@ -36,6 +36,15 @@ label{
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
+
+.reset{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	text-align: center;
+
+}
+
 input{
 	width: 60%;
 	height: 40px;
