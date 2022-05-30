@@ -24,7 +24,7 @@ export default function QuadCanvas() {
       exit={{ opacity : 0}}>
       <Wrapper className="quad">
         <Canvas clasName="canvas">
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />
+          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.3} />
           <ambientLight intensity={5} />
           <spotLight
             intensity={10}
