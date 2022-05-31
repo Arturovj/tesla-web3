@@ -9,6 +9,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 // import TeslaCanvas from "../Tesla/Tesla";
 import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
+import EthCanvas from "../Eth/Eth";
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -46,8 +47,23 @@ export default function Home() {
           variants={imageAnimate}
         >
           <Feature />
+
+          
         </motion.div>
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          variants={imageAnimate}
+        >
+
+        <EthCanvas/>
+        </motion.div>
+
+
       </motion.div>
+      
     </>
   );
 }
