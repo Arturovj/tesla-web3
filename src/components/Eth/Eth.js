@@ -29,7 +29,7 @@ export default function EthCanvas() {
 
 const Wrapper = styled.div`
   position: relative;
- left: 20%;
+  margin: 0 auto;
 
   canvas {
     height: 500px;
