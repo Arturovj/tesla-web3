@@ -1,13 +1,21 @@
-.cart{
-    height: 720px;
-    margin-bottom: 1080px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 40px 20px;
-
+.cart {
+  height: 720px;
+  margin-bottom: 1080px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 20px;
 }
 
-.product-img{
-    width: 720px;
+.product-img {
+  width: 720px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
 }
