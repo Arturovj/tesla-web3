@@ -10,6 +10,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { Toaster } from "react-hot-toast"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
       <FooterContainer />
       <ToastContainer/>
+      <Toaster/>
       
       <CookieConsent
   location="bottom"

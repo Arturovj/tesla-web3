@@ -9,6 +9,7 @@ import getPaymentByUID from "../../../functions/getPaymentsByUID";
 import { useUserContext } from "../../../contexts/userContext";
 import PerfilCanvas from "../../Perfil/PerfilRobot";
 import './Perfil.css'
+// import LoginNft from "../../LoginNft/LoginNft";
 
 export default function Perfil() {
   const { user } = useUserContext();
@@ -61,6 +62,7 @@ pauseOnHover
     {user ?  (<div>
         <div>Perfil</div>
         <div>Welcome {user.email} - {user.uid}</div>
+        {/* <div><LoginNft/></div> */}
 
         {/* {payments.length > 0 && payments.map((payment )=>{payment.amount/100})} */}
        <div className="canvas"> <PerfilCanvas/> </div>

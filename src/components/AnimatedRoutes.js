@@ -21,6 +21,7 @@ import UnProtectedRoutes from "./Guards/UnProtectedRoutes";
 import Reset from "./Pages/Reset/Reset";
 import { Web3ReactProvider } from "@web3-react/core";
 import { getLibrary } from '../../src/components/LoginNft/connector'
+import Nft from "./Pages/NFT/Nft";
 
 
 export default function AnimatedRoutes() {
@@ -42,6 +43,7 @@ export default function AnimatedRoutes() {
       <Route path="/carrito" element={<Carrito/>}></Route>
       <Route path="perfil" element={<Perfil/>}></Route>
       <Route path="reset" element={<Reset/>}></Route>
+      <Route path="/nft" element={<Nft />} />
 
       <Route path="login" element={<UnProtectedRoutes><Login/></UnProtectedRoutes>}></Route>
 
