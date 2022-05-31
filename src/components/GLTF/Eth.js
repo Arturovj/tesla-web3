@@ -14,6 +14,7 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/eth.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
+       <mesh position={[-0.1, -0.5, 0.1]} scale={1}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-0.22, 0, -0.38]} rotation={[Math.PI / 2, 0, 0]} scale={2.41}>
@@ -36,6 +37,7 @@ export default function Model({ ...props }) {
           </group>
         </group>
       </group>
+      </mesh>
     </group>
   )
 }

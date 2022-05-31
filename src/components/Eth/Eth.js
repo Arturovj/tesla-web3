@@ -15,7 +15,7 @@ export default function EthCanvas() {
   return (
     <Wrapper className="world">
       <Canvas clasName="canvas">
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.3}  />
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.1}  />
         <ambientLight intensity={0.23} />
         <spotLight intensity={10} angle={20} penumbra={0.01} position={[-10,20,-5]} castShadow></spotLight>
         <directionalLight position={[-1, 5, 1]} />
@@ -28,7 +28,7 @@ export default function EthCanvas() {
 }
 
 const Wrapper = styled.div`
-  position: relative;
+  
   margin: 0 auto;
 
   canvas {

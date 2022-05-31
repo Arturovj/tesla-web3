@@ -10,6 +10,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
 import EthCanvas from "../Eth/Eth";
+import EthereumFeature from "./EthereumFeature";
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -59,6 +60,7 @@ export default function Home() {
         >
 
         <EthCanvas/>
+        <EthereumFeature/>
         </motion.div>
 
 
