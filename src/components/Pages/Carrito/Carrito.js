@@ -6,6 +6,7 @@ import createCheckoutSession from "../../../functions/createCheckoutSession";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Carrito.css";
+import PaymentForm from "../../CreditCard/CreditCard";
 
 export default function Carrito() {
   const { carrito } = useCarritoContext();
@@ -59,6 +60,7 @@ export default function Carrito() {
             <p>{producto.name}</p>
           </div>
         ))}
+        <PaymentForm/>
         <button onClick={isAuthenticated}>
           BUY
         </button>
