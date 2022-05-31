@@ -53,17 +53,18 @@ export default function Carrito() {
         pauseOnHover
       />{" "}
       <div className="cart">
-        Tu Carrito:
         {carrito.map((producto) => (
           <div>
-            <img src={producto.images[0]} alt={producto.name} />
+            <img className="product-img" src={producto.images[0]} alt={producto.name} />
             <p>{producto.name}</p>
           </div>
         ))}
+        <div>
         <PaymentForm/>
         <button onClick={isAuthenticated}>
           BUY
         </button>
+        </div>
       </div>
     </div>
   );
