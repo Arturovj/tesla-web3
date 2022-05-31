@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Header from "./components/Header/Header";
 
@@ -12,11 +11,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CookieConsent, { Cookies } from "react-cookie-consent";
 
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="App">
+      {/* <Web3ReactProvider getLibrary={getLibrary}></Web3ReactProvider> */}
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {isMenuOpen && <Menu />}
 
@@ -24,6 +25,7 @@ function App() {
 
       <FooterContainer />
       <ToastContainer/>
+      
       <CookieConsent
   location="bottom"
   buttonText="X"

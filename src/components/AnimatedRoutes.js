@@ -19,6 +19,8 @@ import { useUserContext } from "../contexts/userContext";
 import { onAuthStateChanged } from "firebase/auth";
 import UnProtectedRoutes from "./Guards/UnProtectedRoutes";
 import Reset from "./Pages/Reset/Reset";
+import { Web3ReactProvider } from "@web3-react/core";
+import { getLibrary } from '../../src/components/LoginNft/connector'
 
 
 export default function AnimatedRoutes() {
@@ -32,6 +34,7 @@ export default function AnimatedRoutes() {
 
   return (
       <AnimatePresence exitBeforeEnter>
+       <Web3ReactProvider getLibrary={getLibrary}> 
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />}></Route>
       <Route path="shop" element={<Shop/>}></Route>
@@ -48,6 +51,7 @@ export default function AnimatedRoutes() {
       <Route path="/robot" element={<RobotCanvas />}></Route>
       <Route path="*" element={<ErrorPage/>}></Route>
     </Routes>
+    </Web3ReactProvider>
     </AnimatePresence>
   );
 }
