@@ -11,6 +11,7 @@ import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
 import EthCanvas from "../Eth/Eth";
 import EthereumFeature from "./EthereumFeature";
+import Roadmap from "./RoadMap/RoadMap";
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -61,8 +62,18 @@ export default function Home() {
 
         <EthCanvas/>
         <EthereumFeature/>
+        
         </motion.div>
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          variants={imageAnimate}
+        >
 
+        <Roadmap/>
+        </motion.div>
 
       </motion.div>
       

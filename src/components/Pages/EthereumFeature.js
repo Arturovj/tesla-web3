@@ -1,11 +1,8 @@
-import React from 'react'
-
+import React from "react";
+import './EthereumFeature.css';
 
 export default function EthereumFeature() {
   return (
-      <>
-   
-    <p>ETHEREUM</p>
-    </>
-  )
+ <div></div>
+  );
 }
