@@ -6,7 +6,7 @@ export default function FeatureBox(props) {
 
   return (
     
-     
+      <div className={`${featureReview.bootstrap}`}>
         <div className="icon-box">
           <i className={`${featureReview.icon}`}></i>
           <p className="service-title">
@@ -14,7 +14,7 @@ export default function FeatureBox(props) {
           </p>
           <p className="service-para">{featureReview.service}</p>
         </div>
-      
+        </div>
      
        
   );

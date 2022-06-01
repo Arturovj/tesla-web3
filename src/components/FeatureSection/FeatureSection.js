@@ -1,9 +1,9 @@
 import React from "react";
 import data from "../../data/data.json";
 import FeatureBox from "../FeatureBox/FeatureBox";
-import Feature from "../Pages/Feature";
+
 import "./FeatureSection.css";
-// import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 const container = {
   hidden: { opacity: 0 },
@@ -33,12 +33,16 @@ export default function FeatureSection() {
               </div>
             </div>
           </div>
-          <div className="features">
+
+     
+          
+          <div className="features col-md-8 col-12">
             {data.map((featureReview, index) => (
               <FeatureBox featureReview={featureReview} key={index} />
             ))}
           
           </div>
+          
         </div>
       </div>
 

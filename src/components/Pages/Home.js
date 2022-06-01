@@ -60,7 +60,7 @@ export default function Home() {
           variants={imageAnimate}
         >
 
-        <FeatureSection/>
+        <Feature/>
 
         </motion.div>
 
