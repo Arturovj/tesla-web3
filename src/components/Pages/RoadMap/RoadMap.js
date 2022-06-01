@@ -10,7 +10,7 @@ export default function Roadmap() {
             <div className="roadmap-content text-center" style={{ marginTop: "100px" }}>
               <span className='gradient-text'>Tesla Roadmap</span>
               <h2 className='text-white my-2'>Our Tesla Roadmap</h2>
-              <p className='roadmap-text text-light'>Our ICO Template Will Be A Perfect Platform For Presenting Your Ico Launch. This Landing Page Comes In Great And Clean Design</p>
+              <p className='roadmap-text text-light'></p>
             </div>
           </div>
         </div>
