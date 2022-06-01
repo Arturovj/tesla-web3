@@ -8,7 +8,7 @@ export default function Roadmap() {
         <div className="container">
           <div className="roadmap">
             <div className="roadmap-content text-center" style={{ marginTop: "100px" }}>
-              <span className='gradient-text'>Tesla Roadmap</span>
+              <span className='gradient-text title'>Tesla Roadmap</span>
               <h2 className='text-white my-2'>Our Tesla Roadmap</h2>
               <p className='roadmap-text text-light'></p>
             </div>

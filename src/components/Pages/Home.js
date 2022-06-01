@@ -63,17 +63,11 @@ export default function Home() {
         <Feature/>
 
         </motion.div> */}
-        <motion.div
-          initial={"offscreen"}
-          whileInView={"onscreen"}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ staggerChildren: 0.5 }}
-          variants={imageAnimate}
-        >
+      
 
          <FeatureSection/>
 
-        </motion.div>
+        
 
          
         <motion.div
