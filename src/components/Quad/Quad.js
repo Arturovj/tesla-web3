@@ -17,7 +17,7 @@ const imageAnimate = {
   onscreen: { x: 0, opacity: 1 },
   transition: {
     type: "spring",
-    duration: 5,
+    duration: 10,
   },
 };
 
@@ -26,7 +26,7 @@ const textAnimate = {
   onscreen: { y: 0, opacity: 1 },
   transition: {
     type: "spring",
-    duration: 5,
+    duration: 10,
   },
 };
 
@@ -36,7 +36,9 @@ export default function QuadCanvas() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 0,
+        transition: { duration: 0.5}
+        }}
       >
         <Wrapper className="quad">
           <Canvas clasName="canvas">

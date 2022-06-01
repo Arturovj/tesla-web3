@@ -19,7 +19,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 1,
     },
   },
 };
@@ -49,25 +49,26 @@ export default function Shop() {
   }, []);
 
   return (
-    // <motion.div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   exit={{ opacity: 0 }}
-    // >
     <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+   
       <div className="shop">
         {loading ? (
           <div className="loader">
             <HashLoader color="red" size={100} />
           </div>
         ) : (
-          // <motion.div
-          //   initial={"offscreen"}
-          //   whileInView={"onscreen"}
-          //   viewport={{ once: false, amount: 0.5 }}
-          //   transition={{ staggerChildren: 0.5 }}
-          //   variants={imageAnimate}
-          // >
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+            variants={imageAnimate}
+          >
           <div>
             <motion.ul variants={container} initial="hidden" animate="show">
               {productos
@@ -83,10 +84,10 @@ export default function Shop() {
                 : null}
             </motion.ul>
           </div>
-          // </motion.div>
+          </motion.div>
         )}
       </div>
-      {/* </motion.div> */}
+      </motion.div>
     </>
   );
 }
