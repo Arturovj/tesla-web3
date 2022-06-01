@@ -7,7 +7,7 @@ import Hover from "../Hover/Hover";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion/dist/framer-motion";
 // import TeslaCanvas from "../Tesla/Tesla";
-import Feature from "./Feature";
+// import Feature from "./Feature";
 import RedTeslaCanvas from "../Redtesla/Redtesla";
 import EthCanvas from "../Eth/Eth";
 import EthereumFeature from "./EthereumFeature";
@@ -52,7 +52,7 @@ export default function Home() {
         <RedTeslaCanvas />
         <Hover />
       
-        <motion.div
+        {/* <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}
           viewport={{ once: false, amount: 0.5 }}
@@ -62,9 +62,20 @@ export default function Home() {
 
         <Feature/>
 
+        </motion.div> */}
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          variants={imageAnimate}
+        >
+
+         <FeatureSection/>
+
         </motion.div>
 
-
+         
         <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}
