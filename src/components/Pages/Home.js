@@ -12,10 +12,20 @@ import RedTeslaCanvas from "../Redtesla/Redtesla";
 import EthCanvas from "../Eth/Eth";
 import EthereumFeature from "./EthereumFeature";
 import Roadmap from "./RoadMap/RoadMap";
+import FeatureSection from "../FeatureSection/FeatureSection";
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
   onscreen: { x: 0, opacity: 1 },
+  transition: {
+    type: "spring",
+    duration: 1,
+  },
+};
+
+const imageRoadMap = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: { y: 0, opacity: 1 },
   transition: {
     type: "spring",
     duration: 1,
@@ -41,6 +51,7 @@ export default function Home() {
         {/* <TeslaCanvas /> */}
         <RedTeslaCanvas />
         <Hover />
+      
         <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -48,10 +59,12 @@ export default function Home() {
           transition={{ staggerChildren: 0.5 }}
           variants={imageAnimate}
         >
-          <Feature />
 
-          
+        <FeatureSection/>
+
         </motion.div>
+
+
         <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -69,11 +82,12 @@ export default function Home() {
           whileInView={"onscreen"}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ staggerChildren: 0.5 }}
-          variants={imageAnimate}
+          variants={imageRoadMap}
         >
-
         <Roadmap/>
         </motion.div>
+
+        
 
       </motion.div>
       

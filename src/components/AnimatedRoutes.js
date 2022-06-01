@@ -22,6 +22,7 @@ import Reset from "./Pages/Reset/Reset";
 import { Web3ReactProvider } from "@web3-react/core";
 import { getLibrary } from '../../src/components/LoginNft/connector'
 import Nft from "./Pages/NFT/Nft";
+import FeatureSection from '../components/FeatureSection/FeatureSection'
 
 
 export default function AnimatedRoutes() {
@@ -46,6 +47,8 @@ export default function AnimatedRoutes() {
       <Route path="/nft" element={<Nft />} />
 
       <Route path="login" element={<UnProtectedRoutes><Login/></UnProtectedRoutes>}></Route>
+
+      <Route path="/feature" element={<FeatureSection/>}></Route>
 
       <Route path="/cyberquad" element={<QuadCanvas />}></Route>
       <Route path="/tequila" element={<TequilaCanvas />}></Route>

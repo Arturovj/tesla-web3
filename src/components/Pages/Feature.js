@@ -1,5 +1,22 @@
 import React from 'react'
 import './Feature.css'
+import { motion } from 'framer-motion/dist/framer-motion'
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      
+    },
+  },
+}
+
+const item = {
+  hidden: { opacity: 0},
+  show: { opacity: 1}
+}
 
 
 
@@ -17,20 +34,30 @@ export default function Feature() {
         <p className="service-main-heading">Features</p>
       </div>
     </div>
+    <motion.ul
+    variants={container}
+    initial='hidden'
+    animate='show'
+    >
     <div className="row">
       <div className="col-md-6 col-lg-6 col-12">
+      <motion.li variants={item}>
         <div className="icon-box">
         <i className="fas fa-charging-station service-icon"></i>
           <p className="service-title"><a href="#">Lorem Ipsum</a></p>
           <p className="service-para">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
         </div>
+        </motion.li>
+        
       </div>
       <div className="col-md-6 col-lg-6 col-12 mt-4 mt-md-0">
+      <motion.li variants={item}>
         <div className="icon-box">
           <i className="fa fa-car service-icon"></i>
           <p className="service-title"><a href="#">Dolor Sitema</a></p>
           <p className="service-para">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
         </div>
+        </motion.li>
       </div>
       <div className="col-md-6 col-lg-6 col-12 mt-4 mt-md-0">
         <div className="icon-box">
@@ -61,6 +88,7 @@ export default function Feature() {
         </div>
       </div>
     </div>
+    </motion.ul>
   </div>
 </div>
 

@@ -1,5 +1,9 @@
 .main-timeline {
     position: relative;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    
   }
   
   .main-timeline:before {

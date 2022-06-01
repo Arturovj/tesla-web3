@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "icon": "fas fa-charging-station service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" :"col-md-6 col-lg-6 col-12"
+      
+    },
+    {
+        "id": "2",
+        "icon": "fa fa-car service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" : "col-md-6 col-lg-6 col-12 mt-4 mt-md-0"
+    },
+    {
+        "id": "3",
+        "icon": "fa fa-chart-bar service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" : "col-md-6 col-lg-6 col-12 mt-4 mt-md-0"
+        
+    },
+    {
+        "id": "4",
+        "icon": "fas fa-wrench service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" : "col-md-6 col-lg-6 col-12 mt-4 mt-md-0"
+       
+    },
+    {
+        "id": "5",
+        "icon": "fa fa-cog service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" : "col-md-6 col-lg-6 col-12 mt-4 mt-md-0"
+       
+    },
+    {
+        "id": "6",
+        "icon": "fa fa-calendar-alt service-icon",
+        "title": "Lorem Ipsum",
+        "service": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+        "bootstrap" : "col-md-6 col-lg-6 col-12 mt-4 mt-md-0"
+        
+    }
+   
+]

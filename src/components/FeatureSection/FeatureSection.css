@@ -1,0 +1,16 @@
+.features{
+    
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    
+    grid-template-rows: 1fr 1fr 1fr;
+    
+ 
+}
+
+.icon-box{
+  width: 600px;
+  margin: 70px;
+}
