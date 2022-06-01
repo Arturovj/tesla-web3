@@ -14,20 +14,7 @@ const imageAnimate = {
   },
 };
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 10,
-    },
-  },
-};
 
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-};
 
 export default function FeatureSection() {
   return (
@@ -46,7 +33,7 @@ export default function FeatureSection() {
                 transition={{ staggerChildren: 0.1 }}
                 variants={imageAnimate}
               >
-                {/* <motion.ul variants={container} initial="hidden" animate="show"> */}
+              
                   <div className="row">
                     
                     {data.map((featureReview, index) => (
@@ -54,7 +41,7 @@ export default function FeatureSection() {
                     ))}
                   
                   </div>
-                {/* </motion.ul> */}
+          
               </motion.div>
             </div>
           </div>

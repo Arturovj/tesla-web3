@@ -48,21 +48,11 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        {/* <TeslaCanvas /> */}
+    
         <RedTeslaCanvas />
         <Hover />
       
-        {/* <motion.div
-          initial={"offscreen"}
-          whileInView={"onscreen"}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ staggerChildren: 0.5 }}
-          variants={imageAnimate}
-        >
-
-        <Feature/>
-
-        </motion.div> */}
+        
       
 
          <FeatureSection/>

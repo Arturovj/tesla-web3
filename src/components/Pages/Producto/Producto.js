@@ -5,6 +5,7 @@ import { useUserContext } from "../../../contexts/userContext";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import createCheckoutSession from "../../../functions/createCheckoutSession";
 import './Producto.css'
+import { motion } from "framer-motion/dist/framer-motion";
 
 export default function Producto() {
   const { id } = useParams();
@@ -41,6 +42,9 @@ export default function Producto() {
   console.log(user)
   return (
     <>
+    <motion.div  initial={{ opacity : 0 }}
+    animate={{ opacity : 1}}
+    exit={{ opacity : 0}}>
     <div className="producto-container">
       <div>
         Product: {productInfo?.name}
@@ -55,6 +59,7 @@ export default function Producto() {
       <button>Cart</button>
       </Link>
       </div>
+      </motion.div>
     </>
   );
 }

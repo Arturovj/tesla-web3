@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Carrito.css";
 import PaymentForm from "../../CreditCard/CreditCard";
+import { motion } from "framer-motion/dist/framer-motion";
 
 export default function Carrito() {
   const { carrito } = useCarritoContext();
@@ -40,6 +41,9 @@ export default function Carrito() {
   }
 
   return (
+    <motion.div  initial={{ opacity : 0 }}
+    animate={{ opacity : 1}}
+    exit={{ opacity : 0}}>
     <div>
       <ToastContainer
         position="top-center"
@@ -69,5 +73,6 @@ export default function Carrito() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
