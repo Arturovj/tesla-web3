@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./Carrito.css";
 import PaymentForm from "../../CreditCard/CreditCard";
 import { motion } from "framer-motion/dist/framer-motion";
+import MintNft from "../NFT/MintNft/MintNft";
 
 export default function Carrito() {
   const { carrito } = useCarritoContext();
@@ -70,6 +71,7 @@ export default function Carrito() {
         <button onClick={isAuthenticated}>
           BUY
         </button>
+       <MintNft/> 
         </div>
       </div>
     </div>
