@@ -131,7 +131,7 @@ pauseOnHover
     
     
     {user ?  (<div>
-        <div>Perfil</div>
+        <div>Profile</div>
         <div>Welcome {user.email} - {user.uid}</div>
         <div>
               {!isConnected && <LoginNft onLogin={onLogin} onLogout={onLogout}/>}
