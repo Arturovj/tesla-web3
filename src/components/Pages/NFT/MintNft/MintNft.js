@@ -24,7 +24,7 @@ const MintNft = () => {
       })
       .on("transactionHash", () => {
         // toast.success(`Minting your Car... Transaction:${truncatedAddress}`);
-        toast.success(`Minting your Car... Transaction:${truncatedAddress}`, {
+        toast(`Minting your Car... Transaction:${truncatedAddress}`, {
           position: "top-center",
           autoClose: 10000,
           hideProgressBar: false,
