@@ -26,7 +26,7 @@ const MintNft = () => {
         // toast.success(`Minting your Car... Transaction:${truncatedAddress}`);
         toast.success(`Minting your Car... Transaction:${truncatedAddress}`, {
           position: "top-center",
-          autoClose: 8000,
+          autoClose: 10000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -57,7 +57,7 @@ const MintNft = () => {
 
 <ToastContainer
         position="top-center"
-        autoClose={8000}
+        autoClose={10000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
