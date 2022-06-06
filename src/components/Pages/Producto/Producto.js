@@ -55,7 +55,7 @@ export default function Producto() {
       <button onClick={addToCart}>Add to Cart</button>
 
       <button onClick={isAuthenticated}>Buy Now</button>
-        <Link to="/carrito">
+        <Link to="/cart">
       <button>Cart</button>
       </Link>
       </div>
