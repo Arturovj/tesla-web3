@@ -26,7 +26,7 @@ export default function Producto() {
 
   function addToCart() {
     setCarrito([...carrito, productInfo]);
-    navigate("/carrito")
+    navigate("/cart")
   }
 
   function isAuthenticated(){
