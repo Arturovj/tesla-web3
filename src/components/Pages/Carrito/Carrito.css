@@ -19,3 +19,8 @@
   align-items: stretch;
   align-content: stretch;
 }
+
+.euro-button{
+  width: 35px;
+  left: 0;
+}

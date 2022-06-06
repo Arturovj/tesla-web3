@@ -18,6 +18,8 @@
 }
 
 .alert {
+  background: none;
+  border: none;
   text-align: center;
   margin-top: 20px;
 }

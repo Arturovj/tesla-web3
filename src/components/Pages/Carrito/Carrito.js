@@ -9,6 +9,7 @@ import "./Carrito.css";
 import PaymentForm from "../../CreditCard/CreditCard";
 import { motion } from "framer-motion/dist/framer-motion";
 import MintNft from "../NFT/MintNft/MintNft";
+import euro from './euro.png'
 
 export default function Carrito() {
   const { carrito } = useCarritoContext();
@@ -69,7 +70,7 @@ export default function Carrito() {
         <div>
         <PaymentForm/>
         <button onClick={isAuthenticated}>
-          BUY
+         <img className="euro-button" src={euro}></img> BUY TESLA NOW	
         </button>
        <MintNft/> 
         </div>

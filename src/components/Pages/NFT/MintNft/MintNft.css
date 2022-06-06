@@ -1,0 +1,9 @@
+.eth-button{
+    width: 35px;
+    left: 0;
+}
+.button-nft{
+    display: flex;
+    justify-content: space-between;
+    
+}
