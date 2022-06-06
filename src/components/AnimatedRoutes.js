@@ -41,7 +41,7 @@ export default function AnimatedRoutes() {
       <Route path="/" element={<Home />}></Route>
       <Route path="shop" element={<Shop/>}></Route>
       <Route path="producto/:id" element={<Producto/>}></Route>
-      <Route path="/carrito" element={<Carrito/>}></Route>
+      <Route path="/cart" element={<Carrito/>}></Route>
       <Route path="perfil" element={<Perfil/>}></Route>
       <Route path="reset" element={<Reset/>}></Route>
       <Route path="/nft" element={<Nft />} />
