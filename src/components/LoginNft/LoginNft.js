@@ -55,7 +55,7 @@ export default function LoginNft(props) {
 
   return (
     <>
-      <div className="login-nft">LoginNft</div>
+      <div className="login-nft"></div>
       <div className="login-nft">
         <div className="metamaks-account">
           {active && <span>{truncatedAddress}</span>}

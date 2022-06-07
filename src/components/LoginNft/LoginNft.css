@@ -1,3 +1,7 @@
 .text{
     color: white;
 }
+
+.button-container{
+    width: 100px;
+}
