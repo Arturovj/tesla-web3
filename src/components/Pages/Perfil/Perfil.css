@@ -1,7 +1,21 @@
+.page-content{
 
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    
+
+
+   
+}
 
 .padding {
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
     padding: 3rem !important
+    
+   
 }
 
 .user-card-full {
@@ -29,8 +43,7 @@
 }
 
 .bg-c-lite-green {
-        background: -webkit-gradient(linear, left top, right top, from(#cf0b0b), to(#c0001d));
-    background: linear-gradient(to right, #dc0424, #d13030);
+    background: radial-gradient(circle, rgba(232,33,39,1) 0%, rgba(184,20,20,1) 100%);
 }
 
 .user-profile {
