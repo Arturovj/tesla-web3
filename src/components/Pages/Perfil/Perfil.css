@@ -1,19 +1,19 @@
-.page-content{
-
+.profile-container {
     justify-content: center;
     align-items: center;
+    margin-left: 200px;
     margin: auto 0;
-    
-
-
    
+
 }
 
 .padding {
-    margin: auto 0;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem !important
+    display: flex;
+   align-items: center;
+    justify-content: center;   
+    margin: 0 auto;
+
+   
     
    
 }

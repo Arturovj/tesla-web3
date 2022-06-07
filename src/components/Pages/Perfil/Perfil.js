@@ -128,10 +128,10 @@ export default function Perfil() {
       <div className="profile-container">
         {user ? (
           <div>
-            <div class="page-content page-container" id="page-content">
+            <div class="" id="">
               <div class="padding">
                 <div class="row container d-flex justify-content-center">
-                  <div class="col-xl-6 col-md-12">
+                  <div class="col-xl-6 col-md-12 profile-container">
                     <div class="card user-card-full">
                       <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
