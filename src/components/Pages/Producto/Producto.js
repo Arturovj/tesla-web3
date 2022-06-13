@@ -61,7 +61,7 @@ export default function Producto() {
             <div>Product: {productInfo?.name}</div>
             <div>
               {" "}
-              <img src={productInfo?.images[0]} alt={productInfo?.name} />
+              <img className="product-img" src={productInfo?.images[0]} alt={productInfo?.name} />
             </div>
 
             <button onClick={addToCart}>Add to Cart</button>

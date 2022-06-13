@@ -4,3 +4,7 @@
     justify-content: center;
     align-items: center;
 }
+
+.product-img{
+    max-width: 1000px;
+}
